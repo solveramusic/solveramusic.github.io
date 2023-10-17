@@ -1,3 +1,38 @@
+.hover-circle {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+.hover-circle:hover .overlay {
+  opacity: 0.8;
+}
+
+.hover-circle-text {
+  color: slategray;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+/* FROM TEMPLATE */
 body {
   font: 400 15px/1.8 Lato, sans-serif;
   color: #777;
@@ -17,9 +52,6 @@ h3, h4 {
   width: 80%;
   height: 80%;
 }
-.person:hover {
-  border-color: #f1f1f1;
-}
 .carousel-inner img {
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%); /* make all photos black and white */ 
@@ -28,14 +60,6 @@ h3, h4 {
 }
 .carousel-caption h3 {
   color: #fff !important;
-}
-@media (max-width: 600px) {
-  .carousel-caption {
-    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-  }
-  .container {
-    padding: 80px 20px;
-  }
 }
 .bg-1 {
   background: #2d2d30;
@@ -137,4 +161,14 @@ footer a:hover {
 }
 textarea {
   resize: none;
+}
+
+/* Mobile Responsive Stuff */
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+  .container {
+    padding: 80px 20px;
+  }
 }
